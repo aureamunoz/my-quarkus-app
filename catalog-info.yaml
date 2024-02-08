@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: my-quarkus-app
+  description: A cool quarkus app
+  annotations:
+    argocd/app-name: my-quarkus-app-deploy
+    backstage.io/kubernetes-id: my-quarkus-app
+    # It must be commented otherwise we cannot see the Tekton pipelines resources
+    # backstage.io/kubernetes-namespace: qshift
+    backstage.io/source-location: url:https://github.com/aureamunoz/my-quarkus-app
+    # The janus-idp.io/tekton allows to set the boolean value: isTektonCIAvailable which is used within the UI to enable/disable the TektonCIComponent
+    janus-idp.io/tekton: my-quarkus-app
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: aureamunoz/
+spec:
+  type: service
+  lifecycle: production
+  owner: user:default/guest

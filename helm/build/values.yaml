@@ -1,0 +1,16 @@
+app:
+  name: my-quarkus-app
+  namespace: qshift-build
+  cluster:    #
+
+git:
+  branch: main
+  repo: github.com
+  org: aureamunoz
+  name: my-quarkus-app
+
+image:
+  url: quay.io/amunozhe/my-quarkus-app
+  registry:  # NOT USED
+  organization:  # NOT USED
+  name:  # NOT USED
